@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../css/Nav.css";
+import Login from "../components/Login";
 
 function Nav() {
   const [show, handleShow] = useState(false);
@@ -36,7 +37,7 @@ function Nav() {
             </a>
           </li>
           <li className="none1">
-            <a href="#">Login</a>
+            <a href="./Login">Login</a>
           </li>
           <li className="none1">
             <a href="#">Create account</a>

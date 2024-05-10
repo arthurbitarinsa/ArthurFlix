@@ -4,10 +4,13 @@ import Row from "../components/Row";
 import Banner from "../components/Banner";
 import Nav from "../components/Nav";
 import requests from "../components/request";
+import Login from "../components/Login";
+import Signup from "../components/Signup";
 
 function App() {
-  return (
-    <div className="app">
+  return (  
+    <div>
+      <div className="app">
       <Nav />
       <Banner />
       <Row
@@ -15,8 +18,21 @@ function App() {
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
       />
-    </div>
+            <Row
+        title="Top rated"
+        fetchUrl={requests.fetchTopRated}
+        isLargeRow
+      />
+            <Row
+        title="Trending"
+        fetchUrl={requests.fetchTrending}
+        isLargeRow
+      />
+    </div>  
+    </div> 
+      
   );
+  
 }
 
 export default App;
