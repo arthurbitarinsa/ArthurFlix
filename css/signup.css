@@ -1,0 +1,124 @@
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #141414;
+  }
+  
+  .signup-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+  }
+  
+  .signup-form h1 {
+    color: white;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .signup-form input[type="text"],
+  .signup-form input[type="email"],
+  .signup-form input[type="password"],
+  .signup-form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .signup-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    background-color: #e50914;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .signup-form button:hover {
+    background-color: #f40612;
+  }
+  
+  .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    color: white;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #777;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #e50914;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  @media (max-width: 600px) {
+    .signup-form {
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .signup-form {
+      padding: 20px;
+    }
+  }
+  
